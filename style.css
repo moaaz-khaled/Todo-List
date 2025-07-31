@@ -1,0 +1,308 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: #eee;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    min-height: 824px;
+}
+
+.left-side {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    min-height: 100%;
+}
+
+.left-side .image{
+    width: 60%;
+    height: 60%;
+    animation-name: upDown;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.left-side .image img{
+    width: 100%;
+    height: 100%;
+}
+
+.right-side{
+    width: 60%;
+    min-height: 100%;
+}
+
+.right-side h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 65px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+
+.right-side h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+}
+
+.right-side .TaskManger {
+    width: 75%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 35px;
+    box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+.right-side .TaskManger .AddTask {
+    box-sizing: border-box;
+    width: 100%;
+    height: 120px;
+    /* background: linear-gradient(to right, #bdc3c7, #2c3e50); */
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+    border-radius: 13px;
+    padding: 0 15px;
+    -webkit-border-radius: 13px;
+    -moz-border-radius: 13px;
+    -ms-border-radius: 13px;
+    -o-border-radius: 13px;
+}
+
+.justifySpaceBetween{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.right-side .TaskManger .AddTask .addTaskForm{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 80%;
+    padding-top: 5px;
+}
+
+.right-side .TaskManger .AddTask .justifySpaceBetween{
+    color: white;
+}
+
+.right-side .TaskManger .AddTask .justifySpaceBetween p{
+    margin: -10px 0 0 10px;
+}
+
+.right-side .TaskManger .AddTask .justifySpaceBetween div{
+    margin: -10px 10px 0 0;
+}
+
+.right-side .TaskManger .AddTask input[type="text"] {
+    height: 50px;
+    width: 75%;
+    font-size: 18px;
+    font-weight: 500;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 10px;
+    padding-left: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    color: white;
+    outline: none;
+    caret-color: white;
+}
+
+.right-side .TaskManger .AddTask input[type="text"]::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 400;
+}
+
+.right-side .TaskManger .AddTask button {
+    height: 50px;
+    width: 20%;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    font-weight: bold;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.right-side .TaskManger .AddTask button:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+footer {
+    width: 100%;
+    height: auto;
+    background-color: silver;
+}
+
+footer h1{
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.mySocial{
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    font-size: 50px;
+}
+
+.mySocial a{
+    padding-top: 20px;
+    text-decoration: none;
+    margin-top: -8px;
+}
+
+.mySocial .facebook {
+    color: #0866FF;
+    :hover{
+        color: #0959d9;
+    }
+}
+
+.mySocial .instgram {
+    color: #9200F9;
+    :hover{
+        color: #7e06d4;
+    }
+}
+
+.mySocial .whatsApp {
+    color: #23c45e;
+    :hover{
+        color: #1eb354;
+    }
+}
+
+.mySocial .linked-in{
+    color: #0A66C2;
+    :hover{
+        color: #0d58a3;
+    }
+}
+
+@keyframes upDown{
+    from {
+        transform:translateY(20px);
+        -webkit-transform:translateY(20px);
+        -moz-transform:translateY(20px);
+        -ms-transform:translateY(20px);
+        -o-transform:translateY(20px);
+    }
+    to {
+        transform:translateY(-20px);
+        -webkit-transform:translateY(-20px);
+        -moz-transform:translateY(-20px);
+        -ms-transform:translateY(-20px);
+        -o-transform:translateY(-20px);
+    }
+}
+
+
+@media(max-width: 500px) {
+    body{
+        overflow-x: hidden;
+    }
+
+    .left-side{
+        margin-top: 50px;
+    }
+
+    .right-side .TaskManger{
+        width: 88%;
+    }
+
+    .right-side h1{
+        font-size: 40px;
+    }
+    .right-side h2{
+        font-size: 20px;
+    }
+
+    .right-side .TaskManger .AddTask input[type="text"]{
+        width: 60%;
+    }
+
+    .CompletedTask{
+        font-size: 12px;
+    }
+
+    .SelectBox label{
+        font-size: 10px;
+    }
+
+    .NoTasks h3{
+        font-size: 14px;
+    }
+
+    footer h1{
+        font-size: 25px;
+    }
+    .mySocial{
+        font-size: 30px;
+    }
+}
+
+@media(min-width:500px) and (max-width: 1000px) {
+    .left-side{
+        margin-top: 50px;
+    }
+    .right-side .TaskManger .AddTask input[type="text"]{
+        width: 70%;
+    }
+}
+
+@media(max-width: 1200px) {
+    .container{
+        flex-direction: column;
+    }
+    .left-side{
+        width: 100%;
+        height: 30%;
+    }
+    .right-side{
+        width: 100%;
+        margin-bottom: 50px;
+    }
+
+    .left-side .image{
+    width: 30%;
+    height: 60%;
+    }
+
+    .left-side .image img{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+
+@media(min-width: 1200px) and (max-width:1500px) {
+    .left-side .image {
+        width: 45%;
+        height: 45%;
+    }
+    .right-side .TaskManger .AddTask input[type="text"]{
+        width: 70%;
+    }
+}
