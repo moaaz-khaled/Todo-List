@@ -104,8 +104,8 @@ AddTaskBtn.addEventListener("click", ()=> {
     }
     let TaskID = localStorage.getItem("TaskId") || 20220492;
     let TaskName = document.getElementById("addTask").value;
+    document.getElementById("addTask").value = "";
     let AllTask = JSON.parse(window.localStorage.getItem("Tasks")) || [];
-    
     let Task = {
         id:TaskID++,
         Name:TaskName,
