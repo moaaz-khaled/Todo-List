@@ -201,6 +201,13 @@ footer h1{
     }
 }
 
+.mySocial .github{
+    color: black;
+    :hover{
+        color: rgb(64, 62, 62);
+    }
+}
+
 @keyframes upDown{
     from {
         transform:translateY(20px);
