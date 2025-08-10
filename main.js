@@ -97,13 +97,15 @@ let DeleteTask = function(TaskId) {
 let AddTaskBtn = document.getElementById("addbtn");
 
 AddTaskBtn.addEventListener("click", ()=> {
+    const TaskName = document.getElementById("addTask").value;
+    if(TaskName.trim() === "")
+        return;
     let MyDiv = document.querySelector(".NoTasks");
     if(MyDiv) {
         MyDiv.remove();
         AddFoundTaskDiv();
     }
     let TaskID = localStorage.getItem("TaskId") || 20220492;
-    let TaskName = document.getElementById("addTask").value;
     document.getElementById("addTask").value = "";
     let AllTask = JSON.parse(window.localStorage.getItem("Tasks")) || [];
     let Task = {
